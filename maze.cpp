@@ -7,6 +7,7 @@ int playerx=-1;
 int playery=-1;
 int moves=0;
 char control;
+string whatever;
 void clscr(){
 	cout << string( 100, '\n' );
 	return;
@@ -106,6 +107,6 @@ int main(){
 	cout<<"Written by Superfish in C++"<<endl;
 	cout<<"Discord: SuperfishMEMZ#9454"<<endl;
 	cout<<"Source code located at https://github.com/sfmemz/maze"<<endl;
-	system("pause");
+	cin>>whatever;
 	return 0;
 } 
