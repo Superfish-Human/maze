@@ -7,6 +7,10 @@ int playerx=-1;
 int playery=-1;
 int moves=0;
 char control;
+void clscr(){
+	cout << string( 100, '\n' );
+	return;
+}
 void findGoal(){
 	for(int i=0;i<8;i++){
 		for(int j=0;j<8;j++){
@@ -23,10 +27,14 @@ void findGoal(){
 	return;
 }
 void printm(){
-	system("cls");
+	clscr();
 	for(int i=0;i<8;i++){
 		for(int j=0;j<8;j++){
-			cout<<m[i][j];
+			if(m[i][j]==0){
+				cout<<" ";
+			}else{
+				cout<<m[i][j];
+			}
 		}
 		cout<<endl;
 	} 
@@ -76,6 +84,7 @@ void playm(){
 			playerx+=1;
 		}//move right
 	}
+	moves++;
 	if(playerx==goalx&&playery==goaly){
 		return;
 	}else{
